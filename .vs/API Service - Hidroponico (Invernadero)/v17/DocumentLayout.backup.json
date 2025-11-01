@@ -1,0 +1,357 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\data\\serialoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\data\\serialoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\controllers\\ledscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\controllers\\ledscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\dtos\\leddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\dtos\\leddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\services\\iledstatestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\services\\iledstatestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\services\\memoryledstatestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\services\\memoryledstatestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\models\\dhtreading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\models\\dhtreading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\controllers\\plagascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\controllers\\plagascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\controllers\\catalogoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\controllers\\catalogoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\models\\diagnostico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\models\\diagnostico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\controllers\\diagnosticoscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\controllers\\diagnosticoscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\models\\led.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\models\\led.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\models\\enfermedad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\models\\enfermedad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\models\\plaga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\models\\plaga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\dtos\\enfermedaddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\dtos\\enfermedaddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\dtos\\diagnosticodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\dtos\\diagnosticodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\dtos\\plagadtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\dtos\\plagadtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|c:\\users\\ing jeremy\\desktop\\api service - hidroponico (invernadero)\\api service - hidroponico (invernadero)\\controllers\\enfermedadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C917536-9E0A-4564-A1F0-21EFA6C06DE2}|API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero).csproj|solutionrelative:api service - hidroponico (invernadero)\\controllers\\enfermedadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LedsController.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\LedsController.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Controllers\\LedsController.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\LedsController.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Controllers\\LedsController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAiwCkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T06:53:56.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ILedStateStore.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Services\\ILedStateStore.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Services\\ILedStateStore.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Services\\ILedStateStore.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Services\\ILedStateStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T06:52:56.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LedDtos.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\LedDtos.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\DTOs\\LedDtos.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\LedDtos.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\DTOs\\LedDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T06:52:15.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DhtReading.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\DhtReading.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Models\\DhtReading.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\DhtReading.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Models\\DhtReading.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T05:48:39.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Program.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Program.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Program.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Program.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAhwMYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T01:28:26.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Diagnostico.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\Diagnostico.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Models\\Diagnostico.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\Diagnostico.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Models\\Diagnostico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T06:18:53.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SerialOptions.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Data\\SerialOptions.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Data\\SerialOptions.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Data\\SerialOptions.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Data\\SerialOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T02:25:20.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\appsettings.json",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\appsettings.json",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\appsettings.json",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-06T02:26:08.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MemoryLedStateStore.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Services\\MemoryLedStateStore.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Services\\MemoryLedStateStore.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Services\\MemoryLedStateStore.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Services\\MemoryLedStateStore.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowEEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T06:53:30.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CatalogosController.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\CatalogosController.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Controllers\\CatalogosController.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\CatalogosController.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Controllers\\CatalogosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T06:26:04.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlagasController.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\PlagasController.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Controllers\\PlagasController.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\PlagasController.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Controllers\\PlagasController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAIwJ0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T01:58:56.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Enfermedad.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\Enfermedad.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Models\\Enfermedad.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\Enfermedad.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Models\\Enfermedad.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAswCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T03:19:36.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Plaga.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\Plaga.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Models\\Plaga.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\Plaga.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Models\\Plaga.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T03:18:38.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Led.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\Led.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Models\\Led.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Models\\Led.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Models\\Led.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T06:11:05.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DiagnosticosController .cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\DiagnosticosController .cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Controllers\\DiagnosticosController .cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\DiagnosticosController .cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Controllers\\DiagnosticosController .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T05:54:52.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T03:30:06.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DiagnosticoDto.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\DiagnosticoDto.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\DTOs\\DiagnosticoDto.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\DiagnosticoDto.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\DTOs\\DiagnosticoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T06:11:49.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\DTOs\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\LoginRequest.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\DTOs\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T06:11:47.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EnfermedadesController.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\EnfermedadesController.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\Controllers\\EnfermedadesController.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\Controllers\\EnfermedadesController.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\Controllers\\EnfermedadesController.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAmwKUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T01:59:46.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EnfermedadDtos.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\EnfermedadDtos.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\DTOs\\EnfermedadDtos.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\EnfermedadDtos.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\DTOs\\EnfermedadDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T01:58:27.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PlagaDtos.cs",
+              "DocumentMoniker": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\PlagaDtos.cs",
+              "RelativeDocumentMoniker": "API Service - Hidroponico (Invernadero)\\DTOs\\PlagaDtos.cs",
+              "ToolTip": "C:\\Users\\Ing Jeremy\\Desktop\\API Service - Hidroponico (Invernadero)\\API Service - Hidroponico (Invernadero)\\DTOs\\PlagaDtos.cs",
+              "RelativeToolTip": "API Service - Hidroponico (Invernadero)\\DTOs\\PlagaDtos.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T01:55:39.148Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
