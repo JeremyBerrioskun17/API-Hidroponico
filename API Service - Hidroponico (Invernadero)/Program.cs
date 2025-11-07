@@ -151,7 +151,7 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontEnd", p => p
-        .WithOrigins("http://localhost:5173")   // agrega también https si algún día sirves Vite con TLS
+        .WithOrigins("http://localhost:5174")   // agrega también https si algún día sirves Vite con TLS
         .AllowAnyHeader()
         .AllowAnyMethod()
         .AllowCredentials()                     // porque el front usa credentials: "include"
@@ -197,6 +197,8 @@ builder.Services.AddControllers()
 builder.Services.AddSingleton<TokenService>();
 builder.Services.AddScoped<IDiagnosticoService, DiagnosticoService>();
 builder.Services.AddSingleton<ILedStateStore, MemoryLedStateStore>();
+builder.Services.AddScoped<IHydroponicoService, HydroponicoService>();
+builder.Services.AddScoped<ICosechaService, CosechaService>();
 
 var app = builder.Build();
 

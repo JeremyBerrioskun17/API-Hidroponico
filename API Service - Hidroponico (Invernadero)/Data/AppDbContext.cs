@@ -20,6 +20,15 @@ namespace API_Service___Hidroponico__Invernadero_.Data
 
         //public DbSet<Led> Leds => Set<Led>();
 
+
+        // ===== Hidroponía | Cosechas =====
+        public DbSet<Hydroponico> Hidroponicos => Set<Hydroponico>();
+        public DbSet<EtapaHidroponico> EtapasHidroponico => Set<EtapaHidroponico>();
+        public DbSet<CosechaHidroponico> CosechasHidroponico => Set<CosechaHidroponico>();
+        public DbSet<CosechaEtapa> CosechaEtapas => Set<CosechaEtapa>();
+        public DbSet<RiegoHistorico> RiegosHistorico => Set<RiegoHistorico>();
+        public DbSet<Bandeja> Bandejas => Set<Bandeja>();
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -137,6 +146,107 @@ namespace API_Service___Hidroponico__Invernadero_.Data
                 entity.HasIndex(x => new { x.Tipo, x.PlagaId, x.EnfermedadId });
             });
 
+
+            // ===== Hidroponicos =====
+            modelBuilder.Entity<Hydroponico>(e =>
+            {
+                e.ToTable("Hidroponicos", "dbo");
+                e.HasKey(x => x.Id);
+                e.Property(x => x.Nombre).HasMaxLength(150).IsRequired();
+                e.Property(x => x.NumeroHidroponico).IsRequired();
+                e.Property(x => x.Observaciones).HasColumnType("NVARCHAR(MAX)");
+                e.Property(x => x.CantidadBandejas);
+                e.Property(x => x.CreadoEn).HasColumnType("datetime2(0)").HasDefaultValueSql("SYSUTCDATETIME()");
+
+                e.HasIndex(x => x.NumeroHidroponico).HasDatabaseName("IX_Hidroponicos_Numero");
+                e.HasMany(x => x.Cosechas).WithOne(c => c.Hidroponico).HasForeignKey(c => c.HidroponicoId).OnDelete(DeleteBehavior.Cascade);
+                e.HasMany(x => x.Bandejas).WithOne(b => b.Hidroponico).HasForeignKey(b => b.HidroponicoId).OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // ===== EtapasHidroponico =====
+            modelBuilder.Entity<EtapaHidroponico>(e =>
+            {
+                e.ToTable("EtapasHidroponico", "dbo");
+                e.HasKey(x => x.Id);
+                e.Property(x => x.Codigo).HasMaxLength(50).IsRequired();
+                e.Property(x => x.Nombre).HasMaxLength(150).IsRequired();
+                e.Property(x => x.OrdenEtapa).IsRequired();
+                e.Property(x => x.DuracionHoras).IsRequired();
+                e.Property(x => x.RequiereLavado).IsRequired();
+                e.Property(x => x.Observaciones).HasColumnType("NVARCHAR(MAX)");
+
+                e.HasIndex(x => x.Codigo).IsUnique().HasDatabaseName("UX_EtapasHidroponico_Codigo");
+            });
+
+            // ===== CosechasHidroponico =====
+            modelBuilder.Entity<CosechaHidroponico>(e =>
+            {
+                e.ToTable("CosechasHidroponico", "dbo");
+                e.HasKey(x => x.Id);
+
+                e.Property(x => x.HidroponicoId).IsRequired();
+                e.Property(x => x.NombreZafra).HasMaxLength(200);
+                e.Property(x => x.FechaInicio).HasColumnType("datetime2(0)").HasDefaultValueSql("SYSUTCDATETIME()");
+                e.Property(x => x.FechaEstimulada).HasColumnType("datetime2(0)");
+                e.Property(x => x.FechaFin).HasColumnType("datetime2(0)");
+                e.Property(x => x.Observaciones).HasColumnType("NVARCHAR(MAX)");
+                e.Property(x => x.Estado).HasMaxLength(50).IsRequired().HasDefaultValue("ACTIVA");
+                e.Property(x => x.CreadoEn).HasColumnType("datetime2(0)").HasDefaultValueSql("SYSUTCDATETIME()");
+
+                e.HasIndex(x => x.HidroponicoId).HasDatabaseName("IX_Cosechas_HidroponicoId");
+                e.HasMany(x => x.Etapas).WithOne(ce => ce.Cosecha).HasForeignKey(ce => ce.CosechaId).OnDelete(DeleteBehavior.Cascade);
+                e.HasMany(x => x.Riegos).WithOne(r => r.Cosecha).HasForeignKey(r => r.CosechaId).OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // ===== CosechaEtapas =====
+            modelBuilder.Entity<CosechaEtapa>(e =>
+            {
+                e.ToTable("CosechaEtapas", "dbo");
+                e.HasKey(x => x.Id);
+                e.Property(x => x.CosechaId).IsRequired();
+                e.Property(x => x.EtapaId).IsRequired();
+                e.Property(x => x.FechaInicioReal).HasColumnType("datetime2(0)").IsRequired();
+                e.Property(x => x.FechaFinReal).HasColumnType("datetime2(0)").IsRequired(false);
+                e.Property(x => x.DuracionHorasPlan).IsRequired();
+                e.Property(x => x.RiegoProgramadoIntervaloSegundos);
+                e.Property(x => x.Notas).HasColumnType("NVARCHAR(MAX)");
+
+                e.HasIndex(x => new { x.CosechaId, x.EtapaId }).IsUnique().HasDatabaseName("UX_CosechaEtapa_Cosecha_Etapa");
+
+                // Relación a plantilla de etapa (si quieres navegación inversa)
+                e.HasOne(x => x.Etapa).WithMany(et => et.CosechaEtapas).HasForeignKey(x => x.EtapaId).OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // ===== RiegosHistorico =====
+            modelBuilder.Entity<RiegoHistorico>(e =>
+            {
+                e.ToTable("RiegosHistorico", "dbo");
+                e.HasKey(x => x.Id);
+
+                e.Property(x => x.CosechaId).IsRequired();
+                e.Property(x => x.EtapaId).IsRequired(false);
+                e.Property(x => x.HidroponicoId).IsRequired(false);
+                e.Property(x => x.InicioRiego).HasColumnType("datetime2(0)").IsRequired();
+                e.Property(x => x.DuracionSeg).IsRequired(false);
+                e.Property(x => x.Fuente).HasMaxLength(100);
+                e.Property(x => x.Observaciones).HasColumnType("NVARCHAR(MAX)");
+
+                e.HasIndex(x => x.CosechaId).HasDatabaseName("IX_Riegos_CosechaId");
+                e.HasIndex(x => x.InicioRiego).HasDatabaseName("IX_Riegos_InicioRiego");
+            });
+
+            // ===== Bandejas =====
+            modelBuilder.Entity<Bandeja>(e =>
+            {
+                e.ToTable("Bandejas", "dbo");
+                e.HasKey(x => x.Id);
+                e.Property(x => x.HidroponicoId).IsRequired();
+                e.Property(x => x.Numero).IsRequired();
+                e.Property(x => x.CantidadHoyos);
+                e.Property(x => x.Observaciones).HasColumnType("NVARCHAR(MAX)");
+
+                e.HasIndex(x => new { x.HidroponicoId, x.Numero }).IsUnique().HasDatabaseName("UX_Bandejas_Hidroponico_Numero");
+            });
 
             //modelBuilder.Entity<Led>().HasData(new Led { Id = 1, Nombre = "Luces", On = false });
         }
