@@ -5,52 +5,54 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API_Service___Hidroponico__Invernadero_.Services
 {
-    public class HydroponicoService : IHydroponicoService
+    public class HidroponicoService : IHidroponicoService
     {
         private readonly AppDbContext _db;
-        public HydroponicoService(AppDbContext db) { _db = db; }
+        public HidroponicoService(AppDbContext db) { _db = db; }
 
-        public async Task<PagedResult<HydroponicoDto>> GetAsync(int page, int pageSize, bool includeCosechas = false, CancellationToken ct = default)
+        public async Task<PagedResult<HidroponicoDto>> GetAsync(int page, int pageSize, string? q, bool includeCosechas, CancellationToken ct = default)
         {
             var query = _db.Hidroponicos.AsNoTracking().AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(q))
+            {
+                var ql = q.Trim().ToLower();
+                query = query.Where(h =>
+                    h.Nombre.ToLower().Contains(ql) ||
+                    (h.Observaciones != null && h.Observaciones.ToLower().Contains(ql)) ||
+                    h.NumeroHidroponico.ToString().Contains(ql)
+                );
+            }
 
             var total = await query.LongCountAsync(ct);
 
             if (includeCosechas)
             {
-                // traer anidado
                 var items = await query
                     .OrderBy(h => h.Nombre)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize)
-                    .Select(h => new HydroponicoDto
+                    .Select(h => new HidroponicoDto
                     {
                         Id = h.Id,
                         Nombre = h.Nombre,
                         NumeroHidroponico = h.NumeroHidroponico,
                         Observaciones = h.Observaciones,
                         CantidadBandejas = h.CantidadBandejas,
+                        Estado = h.Estado,
                         CreadoEn = h.CreadoEn,
-                        Cosechas = h.Cosechas != null
-                            ? h.Cosechas.OrderByDescending(c => c.FechaInicio)
-                                .Select(c => new CosechaResumenDto
-                                {
-                                    Id = c.Id,
-                                    NombreZafra = c.NombreZafra,
-                                    Estado = c.Estado,
-                                    FechaInicio = c.FechaInicio,
-                                    FechaFin = c.FechaFin
-                                }).ToList()
-                            : new List<CosechaResumenDto>()
+                        Cosechas = h.Cosechas != null ? h.Cosechas.OrderByDescending(c => c.FechaInicio)
+                            .Select(c => new CosechaResumenDto
+                            {
+                                Id = c.Id,
+                                NombreZafra = c.NombreZafra,
+                                Estado = c.Estado,
+                                FechaInicio = c.FechaInicio,
+                                FechaFin = c.FechaFin
+                            }).ToList() : null
                     }).ToListAsync(ct);
 
-                return new PagedResult<HydroponicoDto>
-                {
-                    Page = page,
-                    PageSize = pageSize,
-                    Total = total,
-                    Items = items
-                };
+                return new PagedResult<HidroponicoDto> { Page = page, PageSize = pageSize, Total = total, Items = items };
             }
             else
             {
@@ -58,27 +60,22 @@ namespace API_Service___Hidroponico__Invernadero_.Services
                     .OrderBy(h => h.Nombre)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize)
-                    .Select(h => new HydroponicoDto
+                    .Select(h => new HidroponicoDto
                     {
                         Id = h.Id,
                         Nombre = h.Nombre,
                         NumeroHidroponico = h.NumeroHidroponico,
                         Observaciones = h.Observaciones,
                         CantidadBandejas = h.CantidadBandejas,
+                        Estado = h.Estado,
                         CreadoEn = h.CreadoEn
                     }).ToListAsync(ct);
 
-                return new PagedResult<HydroponicoDto>
-                {
-                    Page = page,
-                    PageSize = pageSize,
-                    Total = total,
-                    Items = items
-                };
+                return new PagedResult<HidroponicoDto> { Page = page, PageSize = pageSize, Total = total, Items = items };
             }
         }
 
-        public async Task<HydroponicoDto?> GetByIdAsync(long id, bool includeCosechas = false, CancellationToken ct = default)
+        public async Task<HidroponicoDto?> GetByIdAsync(long id, bool includeCosechas = false, CancellationToken ct = default)
         {
             if (includeCosechas)
             {
@@ -87,14 +84,14 @@ namespace API_Service___Hidroponico__Invernadero_.Services
                     .Include(h => h.Cosechas)
                     .FirstOrDefaultAsync(h => h.Id == id, ct);
                 if (e is null) return null;
-
-                return new HydroponicoDto
+                return new HidroponicoDto
                 {
                     Id = e.Id,
                     Nombre = e.Nombre,
                     NumeroHidroponico = e.NumeroHidroponico,
                     Observaciones = e.Observaciones,
                     CantidadBandejas = e.CantidadBandejas,
+                    Estado = e.Estado,
                     CreadoEn = e.CreadoEn,
                     Cosechas = e.Cosechas?.OrderByDescending(c => c.FechaInicio)
                         .Select(c => new CosechaResumenDto
@@ -111,65 +108,83 @@ namespace API_Service___Hidroponico__Invernadero_.Services
             {
                 var e = await _db.Hidroponicos.AsNoTracking().FirstOrDefaultAsync(h => h.Id == id, ct);
                 if (e is null) return null;
-                return new HydroponicoDto
+                return new HidroponicoDto
                 {
                     Id = e.Id,
                     Nombre = e.Nombre,
                     NumeroHidroponico = e.NumeroHidroponico,
                     Observaciones = e.Observaciones,
                     CantidadBandejas = e.CantidadBandejas,
+                    Estado = e.Estado,
                     CreadoEn = e.CreadoEn
                 };
             }
         }
 
-        public async Task<HydroponicoDto> CreateAsync(CreateHydroponicoDto dto, CancellationToken ct = default)
+        public async Task<HidroponicoDto> CreateAsync(CreateHidroponicoDto dto, CancellationToken ct = default)
         {
-            // opcional: validar número único si se requiere
-            var exists = await _db.Hidroponicos.AnyAsync(h => h.NumeroHidroponico == dto.NumeroHidroponico, ct);
-            if (exists) throw new ArgumentException("Ya existe un hidroponico con ese NumeroHidroponico.");
-
-            var e = new Hydroponico
+            var e = new Hidroponico
             {
-                Nombre = dto.Nombre,
+                Nombre = dto.Nombre.Trim(),
                 NumeroHidroponico = dto.NumeroHidroponico,
                 Observaciones = dto.Observaciones,
                 CantidadBandejas = dto.CantidadBandejas,
+                Estado = dto.Estado,
                 CreadoEn = DateTime.UtcNow
             };
-            _db.Hidroponicos.Add(e);
-            await _db.SaveChangesAsync(ct);
 
-            return new HydroponicoDto
+            _db.Hidroponicos.Add(e);
+            try
+            {
+                await _db.SaveChangesAsync(ct);
+            }
+            catch (DbUpdateException ex) when (ex.InnerException?.Message.Contains("IX_Hidroponicos_Numero", StringComparison.OrdinalIgnoreCase) == true
+                                             || ex.InnerException?.Message.Contains("constraint", StringComparison.OrdinalIgnoreCase) == true)
+            {
+                throw new InvalidOperationException("Ya existe un Hidropónico con ese NumeroHidroponico.");
+            }
+
+            return new HidroponicoDto
             {
                 Id = e.Id,
                 Nombre = e.Nombre,
                 NumeroHidroponico = e.NumeroHidroponico,
                 Observaciones = e.Observaciones,
                 CantidadBandejas = e.CantidadBandejas,
+                Estado = e.Estado,
                 CreadoEn = e.CreadoEn
             };
         }
 
-        public async Task<HydroponicoDto?> UpdateAsync(long id, UpdateHydroponicoDto dto, CancellationToken ct = default)
+        public async Task<HidroponicoDto?> UpdateAsync(long id, UpdateHidroponicoDto dto, CancellationToken ct = default)
         {
             var e = await _db.Hidroponicos.FirstOrDefaultAsync(h => h.Id == id, ct);
             if (e is null) return null;
 
-            if (!string.IsNullOrWhiteSpace(dto.Nombre)) e.Nombre = dto.Nombre;
-            if (dto.NumeroHidroponico != 0) e.NumeroHidroponico = dto.NumeroHidroponico;
-            if (dto.Observaciones is not null) e.Observaciones = dto.Observaciones;
-            if (dto.CantidadBandejas.HasValue) e.CantidadBandejas = dto.CantidadBandejas;
+            e.Nombre = dto.Nombre.Trim();
+            e.NumeroHidroponico = dto.NumeroHidroponico;
+            e.Observaciones = dto.Observaciones;
+            e.CantidadBandejas = dto.CantidadBandejas;
+            e.Estado = dto.Estado;
 
-            await _db.SaveChangesAsync(ct);
+            try
+            {
+                await _db.SaveChangesAsync(ct);
+            }
+            catch (DbUpdateException ex) when (ex.InnerException?.Message.Contains("IX_Hidroponicos_Numero", StringComparison.OrdinalIgnoreCase) == true
+                                             || ex.InnerException?.Message.Contains("constraint", StringComparison.OrdinalIgnoreCase) == true)
+            {
+                throw new InvalidOperationException("Ya existe un Hidropónico con ese NumeroHidroponico.");
+            }
 
-            return new HydroponicoDto
+            return new HidroponicoDto
             {
                 Id = e.Id,
                 Nombre = e.Nombre,
                 NumeroHidroponico = e.NumeroHidroponico,
                 Observaciones = e.Observaciones,
                 CantidadBandejas = e.CantidadBandejas,
+                Estado = e.Estado,
                 CreadoEn = e.CreadoEn
             };
         }
@@ -181,6 +196,24 @@ namespace API_Service___Hidroponico__Invernadero_.Services
             _db.Hidroponicos.Remove(e);
             await _db.SaveChangesAsync(ct);
             return true;
+        }
+
+        public async Task<IEnumerable<HidroponicoDto>> ListAllAsync(CancellationToken ct = default)
+        {
+            var items = await _db.Hidroponicos.AsNoTracking()
+                .OrderBy(h => h.NumeroHidroponico)
+                .Select(h => new HidroponicoDto
+                {
+                    Id = h.Id,
+                    Nombre = h.Nombre,
+                    NumeroHidroponico = h.NumeroHidroponico,
+                    Observaciones = h.Observaciones,
+                    CantidadBandejas = h.CantidadBandejas,
+                    Estado = h.Estado,
+                    CreadoEn = h.CreadoEn
+                })
+                .ToListAsync(ct);
+            return items;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace API_Service___Hidroponico__Invernadero_.Data
 
 
         // ===== Hidroponía | Cosechas =====
-        public DbSet<Hydroponico> Hidroponicos => Set<Hydroponico>();
+        public DbSet<Hidroponico> Hidroponicos => Set<Hidroponico>();
         public DbSet<EtapaHidroponico> EtapasHidroponico => Set<EtapaHidroponico>();
         public DbSet<CosechaHidroponico> CosechasHidroponico => Set<CosechaHidroponico>();
         public DbSet<CosechaEtapa> CosechaEtapas => Set<CosechaEtapa>();
@@ -148,7 +148,7 @@ namespace API_Service___Hidroponico__Invernadero_.Data
 
 
             // ===== Hidroponicos =====
-            modelBuilder.Entity<Hydroponico>(e =>
+            modelBuilder.Entity<Hidroponico>(e =>
             {
                 e.ToTable("Hidroponicos", "dbo");
                 e.HasKey(x => x.Id);

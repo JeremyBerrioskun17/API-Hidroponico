@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace API_Service___Hidroponico__Invernadero_.Models
 {
     [Table("Hidroponicos", Schema = "dbo")]
-    public class Hydroponico
+    public class Hidroponico
     {
         [Key]
         public long Id { get; set; }
@@ -12,19 +12,24 @@ namespace API_Service___Hidroponico__Invernadero_.Models
         [Required, MaxLength(150)]
         public string Nombre { get; set; } = null!;
 
-        // En DB es BIGINT NOT NULL
+        [Required]
         public long NumeroHidroponico { get; set; }
 
+        // Observaciones en NVARCHAR(MAX)
+        [Column(TypeName = "NVARCHAR(MAX)")]
         public string? Observaciones { get; set; }
 
         public int? CantidadBandejas { get; set; }
 
-        // Default en DB: SYSUTCDATETIME()
-        public DateTime CreadoEn { get; set; }
+        // 0 = libre/desocupado, 1 = ocupado, etc. según tu lógica
+        public int Estado { get; set; } = 0;
 
-        // Navegación
+        public DateTime CreadoEn { get; set; } // default en SQL
+
+        // Navegación: cosechas asociadas (opcional)
         public ICollection<CosechaHidroponico>? Cosechas { get; set; }
+
+        // Navegación: bandejas
         public ICollection<Bandeja>? Bandejas { get; set; }
     }
-
 }

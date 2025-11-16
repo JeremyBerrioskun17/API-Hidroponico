@@ -151,7 +151,10 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontEnd", p => p
-        .WithOrigins("http://localhost:5174")   // agrega también https si algún día sirves Vite con TLS
+    .WithOrigins(
+            "http://localhost:5173",
+            "http://localhost:5174" // agrega también https si algún día sirves Vite con TLS
+        ) 
         .AllowAnyHeader()
         .AllowAnyMethod()
         .AllowCredentials()                     // porque el front usa credentials: "include"
