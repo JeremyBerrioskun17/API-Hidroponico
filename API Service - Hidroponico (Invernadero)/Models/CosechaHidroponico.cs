@@ -13,7 +13,7 @@ namespace API_Service___Hidroponico__Invernadero_.Models
         public long HidroponicoId { get; set; }
 
         [ForeignKey(nameof(HidroponicoId))]
-        public Hydroponico Hidroponico { get; set; } = null!;
+        public Hidroponico Hidroponico { get; set; } = null!;
 
         [MaxLength(200)]
         public string? NombreZafra { get; set; } // ej "Zafra 2025-10-01 lote A"

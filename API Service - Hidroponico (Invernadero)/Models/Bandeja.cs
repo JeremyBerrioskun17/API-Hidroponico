@@ -13,7 +13,7 @@ namespace API_Service___Hidroponico__Invernadero_.Models
         public long HidroponicoId { get; set; }
 
         [ForeignKey(nameof(HidroponicoId))]
-        public Hydroponico Hidroponico { get; set; } = null!;
+        public Hidroponico Hidroponico { get; set; } = null!;
 
         public int Numero { get; set; }
 

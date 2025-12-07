@@ -38,7 +38,7 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
                     .OrderBy(h => h.Nombre)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize)
-                    .Select(h => new HydroponicoDto
+                    .Select(h => new HidroponicoDto
                     {
                         Id = h.Id,
                         Nombre = h.Nombre,
@@ -68,7 +68,7 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
                     .OrderBy(h => h.Nombre)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize)
-                    .Select(h => new HydroponicoDto
+                    .Select(h => new HidroponicoDto
                     {
                         Id = h.Id,
                         Nombre = h.Nombre,
@@ -85,7 +85,7 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
 
         // GET api/hidroponicos/{id}
         [HttpGet("{id:long}")]
-        public async Task<ActionResult<HydroponicoDto>> GetById(long id,
+        public async Task<ActionResult<HidroponicoDto>> GetById(long id,
             [FromQuery] bool includeCosechas = false, CancellationToken ct = default)
         {
             if (includeCosechas)
@@ -97,7 +97,7 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
 
                 if (e is null) return NotFound();
 
-                return Ok(new HydroponicoDto
+                return Ok(new HidroponicoDto
                 {
                     Id = e.Id,
                     Nombre = e.Nombre,
@@ -120,7 +120,7 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
             {
                 var e = await _db.Hidroponicos.AsNoTracking().FirstOrDefaultAsync(h => h.Id == id, ct);
                 if (e is null) return NotFound();
-                return Ok(new HydroponicoDto
+                return Ok(new HidroponicoDto
                 {
                     Id = e.Id,
                     Nombre = e.Nombre,
@@ -167,9 +167,9 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
 
         // POST api/hidroponicos
         [HttpPost]
-        public async Task<ActionResult<HydroponicoDto>> Create([FromBody] CreateHydroponicoDto dto, CancellationToken ct = default)
+        public async Task<ActionResult<HidroponicoDto>> Create([FromBody] CreateHidroponicoDto dto, CancellationToken ct = default)
         {
-            var entity = new Hydroponico
+            var entity = new Hidroponico
             {
                 Nombre = dto.Nombre.Trim(),
                 NumeroHidroponico = dto.NumeroHidroponico,
@@ -189,7 +189,7 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
                 return Conflict(new { error = "Ya existe un Hidropónico con ese NumeroHidroponico." });
             }
 
-            var dtoOut = new HydroponicoDto
+            var dtoOut = new HidroponicoDto
             {
                 Id = entity.Id,
                 Nombre = entity.Nombre,
@@ -204,7 +204,7 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
 
         // PUT api/hidroponicos/{id}
         [HttpPut("{id:long}")]
-        public async Task<ActionResult<HydroponicoDto>> Update(long id, [FromBody] UpdateHydroponicoDto dto, CancellationToken ct = default)
+        public async Task<ActionResult<HidroponicoDto>> Update(long id, [FromBody] UpdateHidroponicoDto dto, CancellationToken ct = default)
         {
             var e = await _db.Hidroponicos.FirstOrDefaultAsync(h => h.Id == id, ct);
             if (e is null) return NotFound();
@@ -224,7 +224,7 @@ namespace API_Service___Hidroponico__Invernadero_.Controllers
                 return Conflict(new { error = "Ya existe un Hidropónico con ese NumeroHidroponico." });
             }
 
-            return Ok(new HydroponicoDto
+            return Ok(new HidroponicoDto
             {
                 Id = e.Id,
                 Nombre = e.Nombre,
